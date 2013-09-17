@@ -1,4 +1,4 @@
-# FaradayMiddleware::Rss
+# FaradayMiddleware::Rss [![Build Status](https://travis-ci.org/mosaicxm/faraday_middleware-rss.png?branch=master)](https://travis-ci.org/mosaicxm/faraday_middleware-rss)
 
 Simple Faraday middleware that uses RSS::Parser to unobtrusively parse RSS feeds.
 
