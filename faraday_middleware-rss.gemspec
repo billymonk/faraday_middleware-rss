@@ -6,8 +6,8 @@ require 'faraday_middleware/rss/version'
 Gem::Specification.new do |spec|
   spec.name          = "faraday_middleware-rss"
   spec.version       = FaradayMiddleware::Rss::VERSION
-  spec.authors       = ["Billy Monk"]
-  spec.email         = ["billy.monk@mosaic.com"]
+  spec.authors       = ["Billy Monk", "S. Brent Faulkner"]
+  spec.email         = ["billy.monk@gmail.com", "sbfaulkner@gmail.com"]
   spec.description   = %q{Faraday response middleware for handling RSS feeds}
   spec.summary       = %q{Faraday response middleware for handling RSS feeds}
   spec.homepage      = ""
@@ -20,7 +20,12 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "faraday_middleware", ">= 0.8.0"
 
-  spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
+  if RUBY_VERSION < '1.9.3'
+    spec.add_development_dependency "rcov"
+  else
+    spec.add_development_dependency "simplecov"
+    spec.add_development_dependency "simplecov-rcov"
+  end
 end
