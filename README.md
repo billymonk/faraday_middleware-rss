@@ -27,7 +27,12 @@ connection = Faraday.new('http://www.example.com') do |faraday|
   faraday.adapter  Faraday.default_adapter
 end
 
-connection.get('/rss')
+data = connection.get('/rss')
+
+data.body.items.each do |article|
+    puts article.title
+end
+
 ```
 
 ## Contributing
