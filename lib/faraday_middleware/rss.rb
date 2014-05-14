@@ -13,4 +13,4 @@ module FaradayMiddleware
   end
 end
 
-Faraday.register_middleware :response, :rss => FaradayMiddleware::Rss::ParseRss
+Faraday::Response.register_middleware :rss => FaradayMiddleware::Rss::ParseRss
